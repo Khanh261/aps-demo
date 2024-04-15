@@ -1,0 +1,95 @@
+@import "../variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  background-color: #f0e5e2;
+  h1 {
+    color: #03c9cf;
+  }
+  .content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin: auto;
+    padding: 60px;
+    box-sizing: border-box;
+    max-width: $max-width-container;
+
+    .item {
+      background-size: cover;
+      background-position: center;
+      width: 400px;
+      height: 400px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 100%;
+      transition: background-size 0.5s, transform 0.5s;
+      .title {
+        position: absolute;
+        color: #03c9cf;
+        font-size: 24px;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        top: 50%;
+      }
+      .toolTip {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        width: 80%;
+        margin: auto;
+        height: 80%;
+        background-color: #06d5fa;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+        transition: opacity 1s;
+        padding: 0 20px;
+        box-sizing: border-box;
+        h3 {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .buttonMore {
+          background: transparent;
+          width: fit-content;
+          margin: auto;
+          color: #fff;
+          border: 1px solid #fff;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #378396 transparent transparent transparent;
+        }
+      }
+      &:hover {
+        background-size: 120%;
+        .toolTip {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
