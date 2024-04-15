@@ -1,0 +1,127 @@
+@use "sass:map";
+@import "../variables.scss";
+
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: map-get($map: $z-index, $key: "STICKY");
+  background-color: #fff;
+  height: 80px;
+  .container {
+    @include space-between;
+    padding: 1rem 0;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    .content {
+      @include space-between;
+      max-width: $max-width-container;
+      width: 100%;
+      margin: 0 auto;
+      .logo {
+        height: 40px;
+        width: auto;
+      }
+      .desktop {
+        display: block;
+        @include space-between;
+
+        .navigation {
+          // @include space-between();
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+          }
+          .translationBtn {
+            @include center;
+            background: transparent;
+            border: none;
+            gap: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            div {
+              border: none;
+            }
+            .flag {
+              border-radius: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+        }
+        .preOrderBtn {
+          width: 190px;
+          font-size: 14px;
+          padding: 0;
+        }
+      }
+
+      .mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $lg) {
+  .wrapper {
+    .container {
+      .content {
+        padding: 0 18px;
+        .logo {
+          height: 30px;
+          width: auto;
+        }
+        .desktop {
+          display: none !important;
+        }
+        .mobile {
+          display: block;
+          max-width: 40px;
+          max-height: 40px;
+          svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+.navigationMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  a {
+    text-decoration: none;
+  }
+}
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: fit-content;
+}

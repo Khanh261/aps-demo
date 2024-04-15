@@ -1,0 +1,13 @@
+.header{
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  z-index: 100;
+  .menu{
+    width: 90vw;
+    height: 100%;
+    background-color: #64faff;
+    border-radius: 25px;
+    position: relative;
+  }
+}

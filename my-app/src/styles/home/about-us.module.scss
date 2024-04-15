@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/about/3.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  position: relative;
+ 
+  .content {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    margin: auto;
+    padding: 60px;
+    box-sizing: border-box;
+    max-width: $max-width-container;
+    gap: 30px;
+    .leftContent {
+      h1 {
+        color: #03c9cf;
+      }
+      p {
+        font-weight: 400;
+      }
+    }
+    .rightContent {
+      display: flex;
+      transform: translateZ(30px);
+      img {
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+      }
+      //
+      &:hover {
+        filter: drop-shadow(0 0 20px #3b4041)
+      }
+    }
+  }
+}
