@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  background-color: #f0e5e2;
+  h1 {
+    color: rgb(2, 162, 162);
+  }
+  .container {
+    max-width: $max-width-container;
+    margin: auto;
+    .slideScreen {
+      width: 100%;
+      padding: 20px 0;
+      .slider{
+        img{
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

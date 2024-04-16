@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "@/styles/home/about-us.module.scss";
-import { useViewportScroll, motion, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
+import Image from "next/image";
 
 const AboutUs = () => {
-  const { scrollYProgress } = useViewportScroll();
-
   return (
     <motion.div
       initial={"hidden"}
@@ -50,7 +48,14 @@ const AboutUs = () => {
               duration: 1,
             })}
           >
-            <img src="/images/about/2.jpg" alt="About Us" />
+            <Image
+              src="/images/about/2.jpg"
+              alt="About Us"
+              width={400}
+              height={400}
+              loading="lazy"
+              blurDataURL="LkM7ld%Mt7of~qa#WBWBE1j[Rjj["
+            />
           </motion.div>
         </div>
       </div>

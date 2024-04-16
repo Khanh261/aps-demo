@@ -43,7 +43,7 @@ const SidebarMenuMobile = () => {
           animate={isActive ? "open" : "closed"}
           initial={"closed"}
         >
-          <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
         </motion.div>
         <Button
           isActive={isActive}

@@ -44,7 +44,7 @@ const Header = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <img className={styles.logo} src="/images/logo.svg" alt="logo" />
+            <img className={styles.logo} src="" alt="logo" />
             <div className={styles.desktop}>
               <div className={styles.navigation}>
                 {NAVIGATIONS.map((item) => (
