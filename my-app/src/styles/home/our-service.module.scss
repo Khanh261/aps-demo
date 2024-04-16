@@ -1,6 +1,9 @@
 @import "../variables.scss";
 
 .wrapper {
+  ::-webkit-scrollbar {
+    display: none;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +53,7 @@
         width: 80%;
         margin: auto;
         height: 80%;
-        background-color: #06d5fa;
+        background-color: rgba(6, 213, 250, 0.5);
         color: #fff;
         text-align: center;
         padding: 5px;
@@ -58,7 +61,7 @@
         position: absolute;
         opacity: 0;
         inset: 0;
-        transition: opacity 1s;
+        transition: opacity 0.5s, visibility 0.5s;
         padding: 0 20px;
         box-sizing: border-box;
         h3 {
@@ -88,6 +91,9 @@
         .toolTip {
           visibility: visible;
           opacity: 1;
+        }
+        .title {
+          display: none;
         }
       }
     }

@@ -1,7 +1,13 @@
+.main {
+  h1 {
+    text-align: center;
+  }
+}
 .gallery {
   height: 175vh;
   overflow: hidden;
-  background: rgb(45, 45, 45);
+  background-image: url("/images/about/3.jpg");
+
   .galleryWrapper {
     position: relative;
     top: -12.5vh;
