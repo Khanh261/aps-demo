@@ -3,30 +3,29 @@ import styles from "@/styles/home/testimonial.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
+import Image from "next/image";
 
 const Testimonials = [
   {
     name: "Testimonial 1",
     content: "This is the first testimonial.",
-    img: "/images/about/1.jpg",
+    img: "/images/1.jpg",
   },
   {
     name: "Testimonial 2",
     content:
       "This is the second testimonial.This is the second testimonial.This is the second testimonial.",
-    img: "/images/about/1.jpg",
+    img: "/images/2.jpg",
   },
   {
     name: "Testimonial 3",
     content: "This is the second testimonial.",
-    img: "/images/about/1.jpg",
+    img: "/images/1.jpg",
   },
   {
     name: "Testimonial 4",
     content: "This is the second testimonial.",
-    img: "/images/about/1.jpg",
+    img: "/images/2.jpg",
   },
 ];
 
@@ -78,10 +77,12 @@ const Testimonial = () => {
           {Testimonials.map((testimonial, index) => (
             <div key={index} className={styles.item}>
               <div className={styles.avatar}>
-                <img
+                <Image
                   className={styles.avatar}
                   src={testimonial.img}
                   alt={testimonial.name}
+                  width={400}
+                  height={400}
                 />
               </div>
               <h3>{testimonial.name}</h3>

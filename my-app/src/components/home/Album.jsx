@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/home/album.module.scss";
-import { useEffect, useRef } from "react";
 import { ALBUMS } from "@/constants/album";
+import Image from "next/image";
 
 const Album = () => {
   return (
@@ -10,13 +10,13 @@ const Album = () => {
       <div className={`${styles.marquee} ${styles.normal}`}>
         <div className={styles.marqueeGroup}>
           {ALBUMS.map((album, index) => (
-            <img key={index} src={album.img} alt="" />
+            <Image key={index} src={album.img} alt="" width={400} height={400} quality={100}/>
           ))}
         </div>
 
         <div aria-hidden="true" className={styles.marqueeGroup}>
           {ALBUMS.map((album, index) => (
-            <img key={index} src={album.img} alt="" />
+            <Image key={index} src={album.img} alt="" width={400} height={400} quality={100}/>
           ))}
         </div>
       </div>
@@ -24,13 +24,13 @@ const Album = () => {
       <div className={`${styles.marquee} ${styles.reverse}`}>
         <div className={styles.marqueeGroup}>
           {ALBUMS.map((album, index) => (
-            <img key={index} src={album.img} alt="" />
+            <Image key={index} src={album.img} alt="" width={400} height={400} quality={100}/>
           ))}
         </div>
 
         <div aria-hidden="true" className={styles.marqueeGroup}>
           {ALBUMS.map((album, index) => (
-            <img key={index} src={album.img} alt="" />
+            <Image key={index} src={album.img} alt="" width={400} height={400} quality={100}/>
           ))}
         </div>
       </div>
