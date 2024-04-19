@@ -21,7 +21,6 @@ main {
     transition: all 0.4s ease-in-out;
   }
   .slick-center {
-    background-image: url("/images/product-service/phone-screen/phone15.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -29,6 +28,18 @@ main {
   }
   .slick-dots {
     bottom: -30px !important;
+    transform: translate(0%, 50px) !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .slick-dots {
+      right: 20%;
+    }
+  }
+  @media screen and (max-width: 526px) {
+    .slick-dots {
+      left: -35%;
+    }
   }
   .slick-dots ul {
     list-style-type: none;
@@ -39,7 +50,7 @@ main {
   .slick-dots li div {
     width: 100%;
     background-color: #d9d9d9;
-    height: 2px;
+    height: 4px;
   }
   .slick-dots li {
     width: 16px !important;

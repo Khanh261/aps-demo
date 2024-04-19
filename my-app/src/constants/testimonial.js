@@ -1,32 +1,22 @@
-const TESTIMONIAL_INFO = [
+const Testimonials = [
   {
-    name: "FirstName LastName",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem enim, mollis non ante id, aliquam commodo libero. Aliquam scelerisque luctus sem convallis porttitor. Ut vulputate pellentesque accumsan. Mauris et ligula fermentum, accumsan sapien nec, ultricies tortor.",
-    bgImage: "/images/about/1.jpg",
+    name: "Testimonial 1",
+    content: "This is the first testimonial.",
+    img: "/images/about/1.jpg",
   },
   {
-    name: "FirstName LastName",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem enim, mollis non ante id, aliquam commodo libero. Aliquam scelerisque luctus sem convallis porttitor. Ut vulputate pellentesque accumsan. Mauris et ligula fermentum, accumsan sapien nec, ultricies tortor.",
-    bgImage: "/images/about/1.jpg",
+    name: "Testimonial 2",
+    content: "This is the second testimonial.",
+    img: "/images/about/1.jpg",
   },
   {
-    name: "FirstName LastName",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem enim, mollis non ante id, aliquam commodo libero. Aliquam scelerisque luctus sem convallis porttitor. Ut vulputate pellentesque accumsan. Mauris et ligula fermentum, accumsan sapien nec, ultricies tortor.",
-    bgImage: "/images/about/1.jpg",
+    name: "Testimonial 3",
+    content: "This is the second testimonial.",
+    img: "/images/about/1.jpg",
   },
   {
-    name: "FirstName LastName",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem enim, mollis non ante id, aliquam commodo libero. Aliquam scelerisque luctus sem convallis porttitor. Ut vulputate pellentesque accumsan. Mauris et ligula fermentum, accumsan sapien nec, ultricies tortor.",
-    bgImage: "/images/about/1.jpg",
-  },
-  {
-    name: "FirstName LastName",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sem enim, mollis non ante id, aliquam commodo libero. Aliquam scelerisque luctus sem convallis porttitor. Ut vulputate pellentesque accumsan. Mauris et ligula fermentum, accumsan sapien nec, ultricies tortor.",
-    bgImage: "/images/about/1.jpg",
+    name: "Testimonial 4",
+    content: "This is the second testimonial.",
+    img: "/images/about/1.jpg",
   },
 ];

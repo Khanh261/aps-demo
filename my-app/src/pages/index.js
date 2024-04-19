@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Banner from "@/components/home/Banner";
+import Hero from "@/components/home/Hero";
 import Header from "@/components/home/Header";
 import Gallery from "@/components/home/Gallery";
 import AboutUs from "@/components/home/AboutUs";
@@ -7,6 +7,8 @@ import OurService from "@/components/home/OurService";
 import Testimonial from "@/components/home/Testimonial";
 import Album from "@/components/home/Album";
 import Blog from "@/components/home/Blog";
+import Footer from "@/components/home/Footer";
+import Price from "@/components/home/Price";
 
 export default function Home() {
   return (
@@ -18,13 +20,15 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <Banner />
+        <Hero />
         <Album />
-        <Gallery />
         <OurService />
+        <Price />
+        <Gallery />
         <Testimonial />
         <AboutUs />
         <Blog />
+        <Footer />
       </main>
     </>
   );
