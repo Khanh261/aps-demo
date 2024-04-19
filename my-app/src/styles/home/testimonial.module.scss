@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url("/images/about/3.jpg");
+  background-image: url("/images/1.jpg");
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -16,7 +16,7 @@
   .container {
     max-width: $max-width-container;
     margin: auto;
-    .item{
+    .item {
       border-radius: 10px;
       box-sizing: border-box;
       padding: 20px;
@@ -24,12 +24,11 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      .avatar{
+      .avatar {
         border-radius: 50%;
         width: 40px;
         height: 40px;
       }
-      
     }
   }
 }

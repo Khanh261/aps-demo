@@ -18,7 +18,7 @@ const AboutUs = () => {
           <Image
             data-scroll
             data-scroll-speed="-5"
-            src="/images/about/1.jpg"
+            src="/images/1.jpg"
             alt="About Us"
             width={400}
             height={400}
@@ -50,11 +50,12 @@ const AboutUs = () => {
             })}
           >
             <Image
-              src="/images/about/2.jpg"
+              src="/images/2.jpg"
               alt="About Us"
               width={400}
               height={400}
               loading="lazy"
+              quality={100}
               blurDataURL="LkM7ld%Mt7of~qa#WBWBE1j[Rjj["
             />
           </motion.div>

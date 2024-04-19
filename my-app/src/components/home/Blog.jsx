@@ -6,21 +6,21 @@ import { fadeIn } from "@/utils/motion";
 
 const BLOGS = [
   {
-    image: "/images/about/1.jpg",
+    image: "/images/1.jpg",
     title: "Relax and Rejuvenate at Our Spa",
     content:
       "Indulge in a blissful escape at our luxurious spa. Whether you're seeking a soothing massage, a refreshing facial, or a calming soak in our mineral-rich pools, our expert therapists will pamper you from head to toe. Discover tranquility and unwind in a serene oasis.",
     date: "15 April 2024",
   },
   {
-    image: "/images/about/2.jpg",
+    image: "/images/2.jpg",
     title: "Lorem ipsum dolor sit amet consectetur",
     content:
       " Indulge in a blissful escape at our luxurious spa. Whether you're seeking a soothing massage, a refreshing facial, or a calming soak in our mineral-rich pools, our expert therapists will pamper you from head to toe. Discover tranquility and unwind in a serene oasis.",
     date: "08 July 2020",
   },
   {
-    image: "/images/about/1.jpg",
+    image: "/images/1.jpg",
     title: "Lorem ipsum dolor sit amet consectetur",
     content:
       " Indulge in a blissful escape at our luxurious spa. Whether you're seeking a soothing massage, a refreshing facial, or a calming soak in our mineral-rich pools, our expert therapists will pamper you from head to toe. Discover tranquility and unwind in a serene oasis.",

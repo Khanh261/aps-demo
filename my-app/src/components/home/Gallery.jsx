@@ -5,17 +5,17 @@ import Lenis from "@studio-freight/lenis";
 import styles from "@/styles/home/gallery.module.scss";
 
 const image = [
-  "/images/banner/1.jpg",
-  "/images/banner/2.jpg",
-  "/images/banner/3.jpg",
-  "/images/banner/4.jpg",
-  "/images/banner/5.jpg",
-  "/images/banner/1.jpg",
-  "/images/banner/2.jpg",
-  "/images/banner/3.jpg",
-  "/images/banner/4.jpg",
-  "/images/banner/5.jpg",
-  "/images/banner/1.jpg",
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/1.jpg",
+  "/images/2.jpg",
+  "/images/3.jpg",
+  "/images/1.jpg",
+  "/images/2.jpg",
 ];
 
 const ParallaxImageScrolling = () => {
