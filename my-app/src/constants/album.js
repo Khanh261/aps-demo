@@ -23,24 +23,4 @@ export const ALBUMS = [
     id: 6,
     img: "/images/about/1.jpg",
   },
-  {
-    id: 7,
-    img: "/images/about/2.jpg",
-  },
-  {
-    id: 8,
-    img: "/images/about/2.jpg",
-  },
-  {
-    id: 9,
-    img: "/images/about/2.jpg",
-  },
-  {
-    id: 10,
-    img: "/images/about/2.jpg",
-  },
-  {
-    id: 11,
-    img: "/images/about/2.jpg",
-  },
 ];

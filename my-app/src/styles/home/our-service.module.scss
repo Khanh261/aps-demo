@@ -10,7 +10,7 @@
   flex-direction: column;
   background-size: cover;
   background-position: center;
-  min-height: 80vh;
+  min-height: fit-content;
   background-color: #f0e5e2;
   h1 {
     color: #03c9cf;
@@ -95,6 +95,32 @@
         .title {
           display: none;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: $lg) {
+  .wrapper{
+    .content{
+      box-sizing: border-box;
+      padding: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      .item{
+        width: 350px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .wrapper{
+    .content{
+      box-sizing: border-box;
+      padding: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      .item{
+        width: 90vw;
       }
     }
   }

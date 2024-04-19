@@ -5,17 +5,17 @@ import Lenis from "@studio-freight/lenis";
 import styles from "@/styles/home/gallery.module.scss";
 
 const image = [
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
-  "/images/about/1.jpg",
+  "/images/banner/1.jpg",
+  "/images/banner/2.jpg",
+  "/images/banner/3.jpg",
+  "/images/banner/4.jpg",
+  "/images/banner/5.jpg",
+  "/images/banner/1.jpg",
+  "/images/banner/2.jpg",
+  "/images/banner/3.jpg",
+  "/images/banner/4.jpg",
+  "/images/banner/5.jpg",
+  "/images/banner/1.jpg",
 ];
 
 const ParallaxImageScrolling = () => {
@@ -75,13 +75,7 @@ const Column = ({ images, y }) => {
       {images.map((src, i) => {
         return (
           <div key={i} className={styles.imageContainer}>
-            <Image
-              src={src}
-              alt="image"
-              fill
-              loading="lazy"
-              blurDataURL="LkM7ld%Mt7of~qa#WBWBE1j[Rjj["
-            />
+            <Image src={src} alt="image" fill loading="lazy" />
           </div>
         );
       })}

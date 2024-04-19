@@ -1,43 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/home/about-us.module.scss";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
 
 const AboutUs = () => {
+  const scrollRef = useRef(null);
+
   return (
     <motion.div
       initial={"hidden"}
       whileInView={"show"}
       viewport={{ once: false, amount: 0.25 }}
     >
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
+      <div data-scroll-container ref={scrollRef} className={styles.wrapper}>
+        <div data-scroll-section className={styles.parallax}>
+          <Image
+            data-scroll
+            data-scroll-speed="-5"
+            src="/images/about/1.jpg"
+            alt="About Us"
+            width={400}
+            height={400}
+            loading="lazy"
+            blurDataURL="LkM7ld%Mt7of~qa#WBWBE1j[Rjj["
+          />
+        </div>
+        <div data-scroll data-scroll-speed="2" className={styles.content}>
           <motion.div
             className={styles.leftContent}
             variants={fadeIn({
               direction: "right",
               type: "tween",
               delay: 0.2,
-              duration: 1,
+              duration: 0.5,
             })}
           >
             <h3>LUXURY, QUALITY & COMFORT</h3>
             <h1>The Beauty</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur in rem eveniet, iure consectetur dolor iusto
-              similique quae, sint laboriosam, possimus et hic eum modi
-              recusandae saepe id ab molestiae amet cum vitae. In mollitia
-              officiis ad repellat fuga autem facere neque, recusandae officia
-              adipisci dolorum expedita tenetur harum, ratione soluta modi
-              provident quam enim cumque illum. Perferendis quidem eaque et
-              distinctio laboriosam neque, optio odio officia tempore quae sed
-              debitis ad, consequuntur laborum fugit laudantium inventore
-              incidunt, saepe error. Voluptas, quis dolorem repellendus eum
-              commodi ut? Odio voluptatem eligendi architecto, excepturi quaerat
-              obcaecati magnam in veritatis nostrum natus ut.
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsam sunt quis ea quod similique debitis fuga modi, sapiente suscipit ipsa, molestias praesentium deserunt commodi? Nostrum sunt eius explicabo soluta, voluptate tenetur autem quos commodi dolor cum modi quibusdam tempora architecto odit delectus tempore nulla eum obcaecati, vero, dicta excepturi adipisci quam reprehenderit nam. Optio voluptas, expedita mollitia nesciunt earum non in, autem pariatur reiciendis error ullam voluptates. Quis laborum velit, totam non sit est temporibus assumenda perferendis similique aspernatur, dolor ducimus, ex earum quasi sapiente vitae necessitatibus eveniet harum qui ad doloribus quaerat nulla repellendus quam? Ex, at expedita! adipisicing elit...</p>
           </motion.div>
           <motion.div
             className={styles.rightContent}
