@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import UseParallaxBackground from "@/common/ParallaxBackground";
 
 const Testimonials = [
   {
@@ -46,7 +47,7 @@ const Testimonial = () => {
       {
         breakpoint: 526,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: false,
         },
@@ -69,29 +70,42 @@ const Testimonial = () => {
     ],
   };
 
+  const imgRef = UseParallaxBackground();
+
   return (
-    <div className={styles.wrapper} id="testimonial">
-      <h1>Testimonials</h1>
-      <div className={styles.container}>
-        <Slider {...settings}>
-          {Testimonials.map((testimonial, index) => (
-            <div key={index} className={styles.item}>
-              <div className={styles.avatar}>
-                <Image
-                  className={styles.avatar}
-                  src={testimonial.img}
-                  alt={testimonial.name}
-                  width={400}
-                  height={400}
-                />
+    <>
+      <div className={styles.wrapper} id="testimonial">
+        <Image
+          ref={imgRef}
+          src="/images/2.jpg"
+          alt="price"
+          layout="fill"
+          objectFit="cover"
+          className={styles.image}
+        />
+        <div className={styles.mainTitle}>Testimonials</div>
+
+        <div className={styles.container}>
+          <Slider {...settings}>
+            {Testimonials.map((testimonial, index) => (
+              <div key={index} className={styles.item}>
+                <div className={styles.avatar}>
+                  <Image
+                    className={styles.avatar}
+                    src={testimonial.img}
+                    alt={testimonial.name}
+                    width={400}
+                    height={400}
+                  />
+                </div>
+                <h3>{testimonial.name}</h3>
+                <p>{testimonial.content}</p>
               </div>
-              <h3>{testimonial.name}</h3>
-              <p>{testimonial.content}</p>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
