@@ -17,19 +17,7 @@ const AboutUs = () => {
     >
       <div data-scroll-container ref={scrollRef} className={styles.wrapper}>
         <div className={styles.mainTitle}>All Services</div>
-
         <div data-scroll-section className={styles.parallax}>
-          <Image
-            ref={imgRef}
-            data-scroll
-            data-scroll-speed="-5"
-            src="/images/3.jpg"
-            alt="About Us"
-            width={400}
-            height={400}
-            loading="lazy"
-            blurDataURL="LkM7ld%Mt7of~qa#WBWBE1j[Rjj["
-          />
         </div>
         <div data-scroll data-scroll-speed="2" className={styles.content}>
           <motion.div

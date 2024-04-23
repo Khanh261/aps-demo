@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Hero from "@/components/home/Hero";
 import Header from "@/components/home/Header";
-import Gallery from "@/components/home/Gallery";
 import AboutUs from "@/components/home/AboutUs";
 import OurService from "@/components/home/OurService";
 import Testimonial from "@/components/home/Testimonial";
@@ -10,7 +9,7 @@ import Blog from "@/components/home/Blog";
 import Footer from "@/components/home/Footer";
 import Price from "@/components/home/Price";
 import GalleryImage from "@/components/home/GalleryImage";
-import Test from "@/components/home/test";
+
 
 export default function Home() {
   return (
@@ -27,13 +26,13 @@ export default function Home() {
         <Album />
         <OurService />
         <Price />
-        {/* <GalleryImage /> */}
         {/* <Gallery /> */}
-        <AboutUs />
+        <GalleryImage />
         <Testimonial />
         <Blog />
+        <AboutUs />
         <Footer />
-        </main>
+      </main>
     </>
   );
 }
