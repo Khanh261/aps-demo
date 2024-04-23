@@ -32,8 +32,12 @@ const ParallaxImageScrolling = () => {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
   useEffect(() => {
-    const lenis = new Lenis();
-    const raf = (time) => {
+    const lenis = new Lenis({
+      lerp: Math.max(0.075, 0.1 * (window.innerWidth / 1920)), 
+      smooth: true,
+      direction: 'vertical',
+      smoothMobile: window.innerWidth > 768, 
+    });    const raf = (time) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
@@ -49,6 +53,7 @@ const ParallaxImageScrolling = () => {
     resize();
     return () => {
       window.removeEventListener("resize", resize);
+      lenis.destroy();
     };
   }, []);
 

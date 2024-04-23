@@ -1,8 +1,6 @@
-import dynamic from "next/dynamic";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "@/styles/home/hero.module.scss";
 import "flickity/css/flickity.css";
-
 
 const LIST_CAROUSEL = [
   {

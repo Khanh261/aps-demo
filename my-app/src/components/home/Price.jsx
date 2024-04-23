@@ -3,9 +3,9 @@ import styles from "@/styles/home/price.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
 import { PRICE_SERVICES } from "@/constants/price";
+import Image from "next/image";
+import UseParallaxBackground from "@/common/ParallaxBackground";
 
 const Price = () => {
   var settings = {
@@ -24,7 +24,7 @@ const Price = () => {
       {
         breakpoint: 526,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           centerMode: false,
         },
@@ -47,35 +47,38 @@ const Price = () => {
     ],
   };
 
+  const imgRef = UseParallaxBackground();
+
   return (
-    <div className={styles.wrapper}>
-      <h1>All Services</h1>
-      <div
-        variants={fadeIn({
-          direction: "right",
-          type: "tween",
-          delay: 0.2,
-          duration: 0.5,
-        })}
-        id="testimonial"
-        className={styles.container}
-      >
-        <Slider {...settings}>
-          {PRICE_SERVICES.map((priceItem, index) => (
-            <div key={index} className={styles.item}>
-              <h3>{priceItem.name}</h3>
-              <p>${priceItem.price}</p>
-              <ul>
-                {priceItem.steps.map((step, index) => (
-                  <li key={index}>{step.name}</li>
-                ))}
-              </ul>
-              <button>Book Now</button>
-            </div>
-          ))}
-        </Slider>
+    <>
+      <div className={styles.wrapper}>
+        <Image
+          ref={imgRef}
+          src="/images/3.jpg"
+          alt="price"
+          layout="fill"
+          objectFit="cover"
+          className={styles.image}
+        />
+      <div className={styles.mainTitle}>All Services</div>
+        <div id="testimonial" className={styles.container}>
+          <Slider {...settings}>
+            {PRICE_SERVICES.map((priceItem, index) => (
+              <div key={index} className={styles.item}>
+                <h3>{priceItem.name}</h3>
+                <p>${priceItem.price}</p>
+                <ul>
+                  {priceItem.steps.map((step, index) => (
+                    <li key={index}>{step.name}</li>
+                  ))}
+                </ul>
+                <button>Book Now</button>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

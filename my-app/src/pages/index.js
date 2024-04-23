@@ -9,6 +9,8 @@ import Album from "@/components/home/Album";
 import Blog from "@/components/home/Blog";
 import Footer from "@/components/home/Footer";
 import Price from "@/components/home/Price";
+import GalleryImage from "@/components/home/GalleryImage";
+import Test from "@/components/home/test";
 
 export default function Home() {
   return (
@@ -21,15 +23,17 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
+        {/* <Test /> */}
         <Album />
         <OurService />
         <Price />
-        <Gallery />
+        {/* <Gallery /> */}
+        <GalleryImage />
         <Testimonial />
-        <AboutUs />
         <Blog />
+        <AboutUs />
         <Footer />
-      </main>
+        </main>
     </>
   );
 }

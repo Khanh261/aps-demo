@@ -11,7 +11,7 @@ const OurService = () => {
           return (
             <div
               style={{
-                backgroundImage: `url(${item.bgImage})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${item.bgImage})`,
               }}
               className={styles.item}
               key={index}

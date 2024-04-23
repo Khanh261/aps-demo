@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "@/styles/home/about-us.module.scss";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
+import UseParallaxBackground from "@/common/ParallaxBackground";
 
 const AboutUs = () => {
   const scrollRef = useRef(null);
+  const imgRef = UseParallaxBackground();
 
   return (
     <motion.div
@@ -14,11 +16,14 @@ const AboutUs = () => {
       viewport={{ once: false, amount: 0.25 }}
     >
       <div data-scroll-container ref={scrollRef} className={styles.wrapper}>
+        <div className={styles.mainTitle}>All Services</div>
+
         <div data-scroll-section className={styles.parallax}>
           <Image
+            ref={imgRef}
             data-scroll
             data-scroll-speed="-5"
-            src="/images/1.jpg"
+            src="/images/3.jpg"
             alt="About Us"
             width={400}
             height={400}
@@ -38,7 +43,21 @@ const AboutUs = () => {
           >
             <h3>LUXURY, QUALITY & COMFORT</h3>
             <h1>The Beauty</h1>
-            <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsam sunt quis ea quod similique debitis fuga modi, sapiente suscipit ipsa, molestias praesentium deserunt commodi? Nostrum sunt eius explicabo soluta, voluptate tenetur autem quos commodi dolor cum modi quibusdam tempora architecto odit delectus tempore nulla eum obcaecati, vero, dicta excepturi adipisci quam reprehenderit nam. Optio voluptas, expedita mollitia nesciunt earum non in, autem pariatur reiciendis error ullam voluptates. Quis laborum velit, totam non sit est temporibus assumenda perferendis similique aspernatur, dolor ducimus, ex earum quasi sapiente vitae necessitatibus eveniet harum qui ad doloribus quaerat nulla repellendus quam? Ex, at expedita! adipisicing elit...</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Iste ipsam sunt quis ea quod
+              similique debitis fuga modi, sapiente suscipit ipsa, molestias
+              praesentium deserunt commodi? Nostrum sunt eius explicabo soluta,
+              voluptate tenetur autem quos commodi dolor cum modi quibusdam
+              tempora architecto odit delectus tempore nulla eum obcaecati,
+              vero, dicta excepturi adipisci quam reprehenderit nam. Optio
+              voluptas, expedita mollitia nesciunt earum non in, autem pariatur
+              reiciendis error ullam voluptates. Quis laborum velit, totam non
+              sit est temporibus assumenda perferendis similique aspernatur,
+              dolor ducimus, ex earum quasi sapiente vitae necessitatibus
+              eveniet harum qui ad doloribus quaerat nulla repellendus quam? Ex,
+              at expedita! adipisicing elit...
+            </p>
           </motion.div>
           <motion.div
             className={styles.rightContent}
