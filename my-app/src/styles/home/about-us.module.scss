@@ -1,12 +1,7 @@
 @import "../variables.scss";
 
 .wrapper {
-  height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.8)
-  );
+  height: 550px;
   display: flex;
   justify-content: center;
   position: relative;
@@ -54,12 +49,13 @@
     gap: 30px;
     z-index: 1;
     .leftContent {
+      color: #343434;
+
       h1 {
         color: #03c9cf;
       }
       p,
       h3 {
-        color: #fff;
         font-weight: 400;
       }
     }

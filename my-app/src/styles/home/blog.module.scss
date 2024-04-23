@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     gap: 20px;
     .post {
+
       z-index: 10;
       width: calc(33% - 10px);
       overflow: hidden;
@@ -36,7 +37,7 @@
         margin: 0 20px;
         padding: 10px;
         border-radius: 10px;
-        transform: translateY(-50px);
+        transform: translateY(-10px);
         transition: transform 0.3s ease-in-out;
         display: flex;
         flex-direction: column;
@@ -64,10 +65,10 @@
       }
       &:hover {
         .postImage {
-          transform: translateY(20px);
+          transform: translateY(10px);
         }
         .content {
-          transform: translateY(-80px);
+          transform: translateY(-20px);
         }
       }
     }
