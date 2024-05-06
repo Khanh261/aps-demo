@@ -11,6 +11,7 @@ import Footer from "@/components/home/Footer";
 import Price from "@/components/home/Price";
 import GalleryImage from "@/components/home/GalleryImage";
 import Test from "@/components/home/test";
+import ZoomParallax from "@/components/home/ZoomParallax";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         {/* <Test /> */}
         <Album />
+        <ZoomParallax />
         <OurService />
         <Price />
         {/* <GalleryImage /> */}
@@ -33,7 +35,7 @@ export default function Home() {
         <Testimonial />
         <Blog />
         <Footer />
-        </main>
+      </main>
     </>
   );
 }
